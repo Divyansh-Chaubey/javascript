@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        color: red;
+        margin: 30px;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <h1 align="center"><u>User Information Form</u></h1>
+  <body>
+    <form action="" style="border: 2px, solid, red; padding: 20px"  onsubmit="return err()">
+      <div>
+        <p id="errname"></p>
+        Enter your name <br />
+        <input type="text" style="width: 90%; margin-bottom: 10px" id="name"/> <br />
+        <p id="errFname"></p>
+        Enter your father's name
+        <input type="text" style="width: 90%; margin-bottom: 10px" id="FName"/> <br />
+        <p id="erremail"></p>
+        Enter your email <br />
+        <p id="errnumber"></p>
+        <input type="email" style="width: 90%; margin-bottom: 10px" id="E_M"/> <br />
+        Enter your phone number
+
+        <input type="number" style="width: 90%; margin-bottom: 10px" id="PNum"/> <br />
+        <p id="errMname"></p>
+        Enter your mother's names
+        <input type="text" style="width: 90%; margin-bottom: 10px" id="MName"/> <br />
+        <p id="errPnumber"></p>
+        Enter your parent's number 
+        <input type="number" style="width: 90%; margin-bottom: 10px" id="PaNum"/>
+        <br />
+        <br />
+        <p id="errDOB"></p>
+        Enter your Dob <input type="date" style="width: 20%" id="D_O_B"/> 
+        Enter youraddress <input type="text" style="width: 25%" id="Add"/> <br />
+        <br />
+      </div>
+      <p id="errgender"></p>
+      <fieldset style="width: 90%">
+        <legend>Gender:</legend>
+        <br />
+        <br />
+        <input type="radio" name="gen" /> male
+        <input type="radio" name="gen" /> female
+        <input type="radio" name="gen" /> other <br />
+        <br />
+      </fieldset>
+      <p id="errcourse"></p>
+      <fieldset style="width: 90%">
+        <legend>Course:</legend>
+        <br />
+        &nbsp <input type="checkbox" />python:
+        <br />
+        &nbsp <input type="checkbox" />java:
+        <br />
+        &nbsp <input type="checkbox" />C++: <br />
+        <br />
+        <br />
+        <p id="errcity"></p>
+      </fieldset>
+      Select your city: <br />
+      <select name="" id="" style="margin: 3px">
+        <option value="">Bhopal</option>
+        <option value="">Indore</option>
+        <option value="">Sagar</option>
+        <option value="">Ujjain</option>
+      </select>
+      <br />
+      <br />
+
+      <input type="button" value="Log in." style="margin: 3px" />
+      <button type="submit" 
+      > submit</button>
+    </form>
+
+    <script src="form.js"></script>
+  </body>
+</html>

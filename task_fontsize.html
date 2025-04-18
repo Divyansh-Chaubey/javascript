@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, earum!</p></div>
+    <button onmouseenter="hide()" onmouseleave="defa()">hide</button>
+    <button onmouseenter="p20()" onmouseleave="defa()">20px</button>
+    <button onmouseenter="p30()" onmouseleave="defa()">30px</button>
+</body>
+<script>
+    let a=document.querySelector("div p");
+
+    let hide=()=>{
+        a.style.fontSize="10px"
+        a.style.cssText="display:none;"
+
+    }
+    let p20=()=>{
+            a.style.cssText="fontSize:20px; color: red; background-color:yello;"
+    }
+    let p30=()=>{
+            a.style.fontSize="30px"
+    }
+    let defa=()=>{
+            a.style.cssText="fontSize:16px; display:block ; transition:ease-in-out;";
+            
+    }
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 400px;
+            height: 600px;
+            background-image:url(./logo.webp);
+            border: 2px solid burlywood;
+        }
+
+        #inside{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .sub{
+            width: 200px;
+            height: 300px;
+            
+        }
+
+        #sub1{
+            background-image: url(./images/1.webp);
+            border: 2px solid black;
+        }
+        
+        #sub2{
+            background-image: url(./images/2.webp);
+            border: 2px solid black;
+        }
+        #sub3{
+            background-image: url(./images/3.webp);
+            border: 2px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <div id="inside">
+    <div id="sub1" onmouseenter="a()" class="sub"></div>
+    <div id="sub2" onmouseenter="b()" class="sub"></div>
+    <div id="sub3" onmouseenter="c()" class="sub"></div>
+    </div>
+    
+    
+</body>
+
+
+<script>
+    let yo=document.querySelector("#main")
+    let a =()=>{
+        yo.style.backgroundImage="url(./images/1.webp)" ;
+    }
+    let b =()=>{
+        yo.style.backgroundImage="url(./images/2.webp)" 
+    }
+    let c =()=>{
+        yo.style.backgroundImage="url(./images/3.webp)" 
+    }
+</script>
+</html>
