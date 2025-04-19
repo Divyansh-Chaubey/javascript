@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Counter</title>
+</head>
+<body>
+    <button onclick="startCounting() ,stopCounting()">Start Counting</button>
+
+    <h1 id="counter">0</h1>
+
+    <script>
+        let count = 0;
+        let intervalId;
+
+        
+        function startCounting() {
+            intervalId = setInterval(() => {
+                count++;
+                document.getElementById("counter").innerText = count;
+            }, 1000);
+        }
+
+        // Function to stop counting
+        function stopCounting() {
+            setTimeout(() => {
+                clearInterval(intervalId);
+            }, 5000);
+            
+        }
+    </script>
+</body>
+</html>
