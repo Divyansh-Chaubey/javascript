@@ -33,6 +33,6 @@ let err = () => {
         return false;
     }
 
-    // If all validations pass
+    
     return true;
 };
