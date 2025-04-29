@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="hi">
+    <br>
+    <br>
+    <button id="yo">click</button>
+    <h1 id="dis"></h1>
+    <h1 id="di"></h1>
+</body>
+<script>
+    let a=document.querySelector("#yo")
+    let b=document.querySelector("#hi")
+    let c=document.querySelector("#dis")
+    let d=document.querySelector("#di")
+    a.addEventListener("click",()=>{
+        alert("hello")
+    })
+    b.addEventListener('input',(e)=>{
+        c.innerText=b.value; 
+        d.innerText=e.target.value; 
+    })
+
+</script>
+</html>
+
+
+<!-- todoList -->
