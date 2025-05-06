@@ -1,4 +1,121 @@
+Local storage
+js
+
+Local Storage in JavaScript is a web storage mechanism that allows you to store data in the user's browser persistently. Unlike session storage, which clears when the session ends, local storage keeps data even after the browser is closed and reopened.
+Key Features of Local Storage:
+* Persistent Storage: Data remains until explicitly removed.
+* Key-Value Storage: Stores data in key-value pairs (both as strings).
+* Client-Side Storage: No server interaction is required.
+* Storage Capacity: Typically up to 5MB per domain.
+How to Use Local Storage:
+1. Storing Data
+localStorage.setItem("username", "Divyansh"); 
+2. Retrieving Data
+let user = localStorage.getItem("username"); console.log(user); // Outputs: Divyansh 
+3. Removing a Specific Item
+localStorage.removeItem("username"); 
+4. Clearing All Local Storage Data
+localStorage.clear(); 
+Use Cases:
+* Storing user preferences (e.g., theme settings).
+* Caching lightweight data for faster page loads.
+* Maintaining authentication states without relying on cookies.
+
+Almost! You’ve covered the main methods, but there’s one more that’s useful—length.
+console.log(localStorage.length); // Returns the number of stored items 
+
+
+
+
+
+
+
+Setting up the json server
+
+Setting up a JSON local server is a great way to simulate a backend for testing and development. Here’s a step-by-step guide:
+1. Install Node.js
+First, ensure you have Node.js installed. You can download it from Node.js official site.
+2. Install JSON Server
+Once Node.js is installed, open your terminal or command prompt and run:
+npm install -g json-server
+This installs JSON Server globally.
+3. Create a JSON File
+Inside your project folder, create a file named db.json and structure it like this:
+{
+  "users": [
+    { "id": 1, "name": "Divyansh", "age": 22 },
+    { "id": 2, "name": "Alex", "age": 25 }
+  ]
+}
+4. Start the JSON Server
+Navigate to the folder containing db.json and run:
+json-server --watch db.json
+This starts the server and watches for changes.
+5. Access the API
+Once the server is running, you can access the API at:
+http://localhost:3000/users
+You can perform CRUD operations using HTTP methods like GET, POST, PUT, and DELETE.
+Would you like to integrate this with your JavaScript projects, maybe for storing car rental data dynamically? ??
+
+
+
 async & await :> these two function are used to make the fatch operation to asyncronnous
 
 
 crud operation
+
+
+
+
+
+
+
+
+
+CRUD OPERATION
+
+These are the four main HTTP methods used in RESTful APIs, including when working with JSON Server. Here's what each does:
+1. GET (Retrieve Data)
+* Used to fetch data from the server.
+* Example in JavaScript: 
+* fetch('http://localhost:3000/users')
+*   .then(response => response.json())
+*   .then(data => console.log(data));
+* Returns a list of users from db.json.
+
+2. POST (Add Data)
+* Used to create new records in the database.
+* Example: 
+* fetch('http://localhost:3000/users', {
+*   method: 'POST',
+*   headers: {
+*     'Content-Type': 'application/json'
+*   },
+*   body: JSON.stringify({ name: "John", age: 30 })
+* }).then(response => response.json())
+*   .then(data => console.log(data));
+* Adds { name: "John", age: 30 } to db.json.
+
+3. PUT (Update Data)
+* Used to replace an existing record.
+* Example: 
+* fetch('http://localhost:3000/users/1', {
+*   method: 'PUT',
+*   headers: {
+*     'Content-Type': 'application/json'
+*   },
+*   body: JSON.stringify({ name: "John Doe", age: 31 })
+* }).then(response => response.json())
+*   .then(data => console.log(data));
+* Updates the user with id: 1 in db.json.
+
+4. DELETE (Remove Data)
+* Used to delete records from the database.
+* Example: 
+* fetch('http://localhost:3000/users/1', {
+*   method: 'DELETE'
+* }).then(response => response.json())
+*   .then(data => console.log(data));
+* Deletes the user with id: 1.
+Would you like to test this with a practical project, maybe managing car rental data dynamically? ??
+
