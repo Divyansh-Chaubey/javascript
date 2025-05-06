@@ -1,33 +1,4 @@
 {
-    "Car_rental": [
-        {
-          "carId": 1,
-          "brand": "Toyota",
-          "model": "Corolla",
-          "year": 2020,
-          "rentalPricePerDay": 500,
-          "availability": true,
-          "features": ["GPS", "Bluetooth", "Air Conditioning"]
-        },
-        {
-          "carId": 2,
-          "brand": "Honda",
-          "model": "Civic",
-          "year": 2019,
-          "rentalPricePerDay": 450,
-          "availability": false,
-          "features": ["Cruise Control", "Rear Camera", "Air Conditioning"]
-        },
-        {
-          "carId": 3,
-          "brand": "Ford",
-          "model": "Focus",
-          "year": 2021,
-          "rentalPricePerDay": 550,
-          "availability": true,
-          "features": ["Heated Seats", "Bluetooth", "Parking Sensors"]
-        }
-      ]
-      
-     
+
+    
 }
