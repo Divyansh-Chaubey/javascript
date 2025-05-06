@@ -4,3 +4,4 @@ function generateOTP() {
 
 const otp = generateOTP();
 console.log("Your OTP is:", otp);
+// hello
